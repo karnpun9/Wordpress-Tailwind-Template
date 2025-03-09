@@ -4,12 +4,9 @@
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php get_search_form(); ?>
 
-            <?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-        <?php endwhile; endif; ?>
-
+        <button class="btn">Click</button>
     </main><!-- #main -->
 </div><!-- #primary -->
 

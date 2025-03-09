@@ -9,6 +9,8 @@ function wp_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+    add_theme_support('menus');
+
 
 	/**
 	 * un comment these lines if you want to register your own image size
@@ -54,7 +56,8 @@ function wp_theme_register_script() {
 	 * dependency on jQuery, and place this before close body tag
 	 */
 	// wp_register_script('wp-vendor', get_theme_file_uri('/js/vendor/vendor.js'), array('jquery'), '1.0.0', true);
-	// wp_register_script('wp-client', get_theme_file_uri('/js/complied.js'), array('jquery'), '1.0.0', true);
+	wp_register_script('custom', get_theme_file_uri('/js/custom.js'), array('jquery'), '1.0.0', true);
+    wp_enqueue_script('custom');
 
 	/**
 	 * Uncomment if you want to pass an php variebles to js-script
@@ -62,13 +65,11 @@ function wp_theme_register_script() {
 	 */
 	// $js_variables = array('homeURL' => home_url());
 	// wp_localize_script( 'wp-client', 'themeVariables', $js_variables );
-	// wp_enqueue_script('wp-vendor');
 	// wp_enqueue_script('wp-client');
 }
 add_action('wp_enqueue_scripts', 'wp_theme_register_script');
 
 
-add_theme_support('menus');
 
 
 
