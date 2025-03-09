@@ -1,0 +1,22 @@
+/*!
+Theme Name: new
+Theme URI: https://www.example.com
+Author: Chayada Punsombut
+Author URI: https://www.example.com
+Description: Premium responsive WordPress theme for example.com
+Version: 1.0
+Requires at least: 5.0
+Requires PHP: 7.0
+Requires WP: 5.0
+Text Domain: new
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.menu{
+
+    @apply flex items-center gap-6;
+}
