@@ -1,9 +1,11 @@
 {
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
     "build": "tailwindcss -i ./input.css -o ./style.css",
     "watch": "tailwindcss -i ./input.css -o ./style.css --watch"
+  
   }
 }
